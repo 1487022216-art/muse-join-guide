@@ -1,0 +1,13 @@
+# Muse join guide
+
+> How to join Muse without missing the 48-hour invite window. Code F9KUI3. Enter within 48 hours of joining. Mobile: Settings > Redeem token. Web: Settings > General > Usage > Redeem invite code. Reward is whatever your own redemption page shows. No specific token amount is promised here.
+
+## Docs
+
+- [How to join Muse without missing the 48-hour invite window](index.html): 48-hour window, code F9KUI3, redemption paths, disclosure, and a real morning-check example ($16,900 old quote vs $18,400 new quote).
+- [Full write-up on Hashnode](https://solei.hashnode.dev/muse-connectors-and-scheduled-tasks-how-i-stop-things-slipping): Muse connectors and scheduled tasks, how the author stops things slipping.
+
+## Optional
+
+- [YouTube Shorts, 20 seconds](https://www.youtube.com/shorts/w0A12zE9fQM): I almost sent the wrong quote. $1,500 wrong.
+- [YouTube Shorts, 41 seconds](https://www.youtube.com/shorts/an32M9WnFvQ): Full Maya story version.
