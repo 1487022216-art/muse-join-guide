@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Muse Morning Check Brief Generator — free</title>
+<style>body{font-family:system-ui,Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.7;color:#111}input,select,textarea{width:100%;padding:10px;margin:6px 0 16px;font-size:16px}button{padding:12px 20px;font-size:16px}pre{white-space:pre-wrap;background:#f4f4f4;padding:16px;border-left:4px solid #111}</style>
+</head>
+<body>
+<h1>Morning Check Brief Generator</h1>
+<p>Answer 3 questions. Get a brief you can copy-paste into Muse. No account, no email, no password.</p>
+<label>What do you do? <input id="job" placeholder="e.g. operations coordinator, small business owner"></label>
+<label>What do you check first? <select id="first"><option>Email and calendar</option><option>Email only</option><option>Calendar only</option></select></label>
+<label>What should it NOT report? <input id="not" placeholder="e.g. marketing mail, old threads with no action today"></label>
+<button onclick="gen()">Generate my brief</button>
+<pre id="out">Your brief will appear here.</pre>
+<button onclick="copyOut()">Copy brief</button>
+<p id="copyMsg"></p>
+<h2>How to use it</h2>
+<ol><li>Connect email and calendar in Muse first.</li><li>Create a scheduled task, same time every morning, paste the brief above.</li><li>Keep approvals on for sending, booking, and paying. Always.</li><li>Run it 3 days. If it is noisy, fix the brief first, do not add a second job.</li></ol>
+<p>Joining Muse? Enter an invite code within 48 hours of joining, in Settings &gt; Redeem token (app) or Settings &gt; General &gt; Usage &gt; Redeem invite code (web). Code: <strong>F9KUI3</strong>. Disclosure: this is my referral code, reward is whatever your own redemption page shows. First 20 people who use it and reply “morning check” where you found this tool — I will give one round of feedback on your brief, free.</p>
+<script>
+function gen(){
+  var job=document.getElementById('job').value||'my work';
+  var first=document.getElementById('first').value;
+  var not=document.getElementById('not').value||'marketing mail and old threads with no action today';
+  document.getElementById('out').textContent=
+  'Goal: Every morning, before I open email, give me one page for '+job+'.\n'+
+  'Scope: '+first+', for today only.\n'+
+  'Report: Due today, double-bookings in plain words, buried items (newest version vs old version, side by side).\n'+
+  'Do NOT report: '+not+'.\n'+
+  'When NOT to report: On quiet days, say "nothing due today" in one line.\n'+
+  'Approvals: Ask me before sending, booking, or paying. Always.';
+}
+function copyOut(){navigator.clipboard.writeText(document.getElementById('out').textContent);document.getElementById('copyMsg').textContent='Copied. Paste it into Muse as a scheduled task.';}
+</script>
+</body>
+</html>
